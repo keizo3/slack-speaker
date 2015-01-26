@@ -1,0 +1,11 @@
+#!/bin/sh
+
+set -e
+
+npm install
+export PATH="node_modules/.bin:node_modules/hubot/node_modules/.bin:$PATH"
+export HUBOT_SLACK_TOKEN=xoxb-3514735290-xYVUvgCZzGxJDqCpNx96IHLg
+
+forever start -c coffee node_modules/.bin/hubot -a slack
+
+# exec node_modules/.bin/hubot "$@"
