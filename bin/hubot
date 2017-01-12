@@ -4,8 +4,8 @@ set -e
 
 npm install
 export PATH="node_modules/.bin:node_modules/hubot/node_modules/.bin:$PATH"
-export HUBOT_SLACK_TOKEN=xoxb-3510414848-dBTGwSrGhIDuedEaTawTVDmx
+export HUBOT_SLACK_TOKEN=xoxb-112658046149-JSem9AWPJTOXwG3Hyn7Mj7G7
 
-forever start -c coffee node_modules/.bin/hubot -a slack
+forever start -w -c coffee node_modules/.bin/hubot -a slack
 
 # exec node_modules/.bin/hubot "$@"
